@@ -7,8 +7,8 @@
 
 /* Base page styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
+  font-family: 'Public Sans', 'Helvetica', 'Inter', sans-serif;
+  background-color: #cfdcee;
   padding: 20px;
 }
 
@@ -29,9 +29,12 @@ body {
 }
 
 h1 {
-  font-family: Verdana, sans-serif;
+  font-family: Public Sans, sans-serif;
   font-weight: bold;
-  color: #212121;
+  color: #061f4a;
+  font-size: 2.5rem;
+  letter-spacing: 0.01em;
+  margin-left: 10px;
 }
 
 /* Logo */
@@ -51,9 +54,8 @@ h1 {
 }
 
 /* Inputs and buttons */
-input[type="date"],
-button {
-  font-family: Arial, sans-serif;
+input[type="date"] {
+  font-family: 'Inter', sans-serif;
   font-weight: normal;
   color: #666;
   padding: 10px 15px;
@@ -64,12 +66,21 @@ button {
   width: 100%;
 }
 
-/* Button specific */
 button {
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  color: #323a45;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.4;
+  width: 100%;
   background-color: #d3d3d3;
-  color: black;
   cursor: pointer;
 }
+
+/* Button specific */
 button:hover {
   background-color: #bfbfbf;
 }
@@ -108,13 +119,12 @@ button:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
-/* Three columns on wider screens */
-@media (min-width: 1000px) {
-  .gallery-item {
-    flex: 0 1 31%;
-  }
+.gallery-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Zoom the whole card on hover */
 }
 
 .gallery-item img {
@@ -122,12 +132,6 @@ button:hover {
   height: 200px;
   object-fit: cover;
   border-radius: 4px;
-}
-
-.gallery-item p {
-  margin-top: 10px;
-  padding: 5px;
-  font-size: 14px;
 }
 
 /* Placeholder content */
@@ -141,4 +145,16 @@ button:hover {
 .placeholder-icon {
   font-size: 48px;
   margin-bottom: 20px;
+}
+
+/* Three columns on wider screens */
+@media (min-width: 1000px) {
+  .gallery-item {
+    flex: 0 1 31%;
+  }
+}
+
+#spaceFact {
+  font-family: Helvetica, sans-serif;
+  color: #323a45;
 }
